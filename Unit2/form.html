@@ -2,5 +2,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyle's Form</title>
+    <title>Golf Club Rental Reservation Form</title>
 </head>
+<body>
+    <h1>Golf Club Rental Reservation Form</h1>
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Rental Clubs</legend>
+            <label for="irons">Select Irons:</label>
+            <select id="irons" name="irons">
+                <option value="taylormade_p790">Taylormade P790 Irons</option>
+                <option value="titleist_t100">Titleist T100 Irons</option>
+            </select><br><br>
+
+            <label for="fairway_woods">Select Fairway Woods and Hybrids:</label>
+            <select id="fairway_woods" name="fairway_woods">
+                <option value="taylormade_qi10">Taylormade Qi10 Woods and Hybrids</option>
+                <option value="titleist_tsr2">Titleist TSr2 Woods and Hybrids</option>
+            </select><br><br>
+
+            <label for="driver">Select Driver:</label>
+            <select id="driver" name="driver">
+                <option value="taylormade_qi10_max">Taylormade Qi10 Max Driver</option>
+                <option value="titleist_tsr2">Titleist TSr2 Driver</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Date and Time</legend>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Select Time:</label>
+            <select id="time" name="time" required>
+                <option value="06:00">06:00</option>
+                <option value="06:20">06:20</option>
+                <option value="06:40">06:40</option>
+                <option value="07:00">07:00</option>
+                <option value="07:20">07:20</option>
+                <option value="07:40">07:40</option>
+                <option value="08:00">08:00</option>
+                <option value="08:20">08:20</option>
+                <option value="08:40">08:40</option>
+                <option value="09:00">09:00</option>
+                <option value="09:20">09:20</option>
+                <option value="09:40">09:40</option>
+                <option value="10:00">10:00</option>
+                <option value="10:20">10:20</option>
+                <option value="10:40">10:40</option>
+                <option value="11:00">11:00</option>
+                <option value="11:20">11:20</option>
+                <option value="11:40">11:40</option>
+                <option value="12:00">12:00</option>
+                <option value="12:20">12:20</option>
+                <option value="12:40">12:40</option>
+                <option value="13:00">13:00</option>
+                <option value="13:20">13:20</option>
+                <option value="13:40">13:40</option>
+                <option value="14:00">14:00</option>
+                <option value="14:20">14:20</option>
+                <option value="14:40">14:40</option>
+                <option value="15:00">15:00</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Agreement</legend>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label><br><br>
+            <input type="checkbox" id="promotions" name="promotions">
+            <label for="promotions">I agree to receive email promotions</label><br><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

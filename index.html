@@ -7,45 +7,66 @@
         body {
             font-family: sans-serif;
             margin: 20px;
+            margin-left: 200px;
         }
         h1, h2 {
             text-align: center;
         }
-        ol {
-            list-style-type: decimal;
+        #unit-list {
+            position: fixed;
+            top: 100px;
+            left: 20px;
+            max-height: 80%;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <h1>Kyle's Page</h1>
     <h2>CSCI434 Web Programming</h2>
-    <ol>
-        <li><a href="#">Unit 1</a></li>
-        <li>Unit 2
-            <ul>
-                <li><a href="#">Part 1</a></li>
-                <li><a href="#">Part 2</a></li>
-            </ul>
-        </li>
-        <li>Unit 3
-            <ul>
-                <li><a href="#">Part 1</a></li>
-                <li><a href="#">Part 2</a></li>
-            </ul>
-        </li>
-        <li>Unit 4
-            <ul>
-                <li><a href="#">Part 1</a></li>
-                <li><a href="#">Part 2</a></li>
-            </ul>
-        </li>
-        <li>Unit 5
-            <ul>
-                <li><a href="#">Part 1</a></li>
-                <li><a href="#">Part 2</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Unit 6</a></li>
-    </ol>
+    
+    <hr>
+    
+    <h3 id="startUnit1"><p>Unit 1</p></h3>
+    <p><a href="/kylespage/Unit 1/Kyle Deschamps - Unit 1.pdf">Unit 1 PDF</a></p>
+    
+    <hr>
+
+    <h3><p>Unit 2</p>
+        <h4 id="startUnit2Part1">Part 1
+    <div id="unit-list">
+        <ul>
+            <li><a href="#startUnit1">Unit 1</a></li>
+            <li>Unit 2
+                <ul>
+                    <li><a href="#startUnit2Part1">Part 1</a></li>
+                    <li><a href="#startUnit2Part2">Part 2</a></li>
+                </ul>
+            </li>
+            <li>Unit 3
+                <ul>
+                    <li><a href="#">Part 1</a></li>
+                    <li><a href="#">Part 2</a></li>
+                </ul>
+            </li>
+            <li>Unit 4
+                <ul>
+                    <li><a href="#">Part 1</a></li>
+                    <li><a href="#">Part 2</a></li>
+                </ul>
+            </li>
+            <li>Unit 5
+                <ul>
+                    <li><a href="#">Part 1</a></li>
+                    <li><a href="#">Part 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Unit 6</a></li>
+        </ul>
+    </div>
 </body>
 </html>

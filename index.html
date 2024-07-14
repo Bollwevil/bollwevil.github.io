@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
         body {
             font-family: sans-serif;
             margin: 20px;
-            margin-left: 200px;
-            margin-right: 200px;
+            margin-left: 15%;
+            margin-right: 15%;
         }
         h1, h2 {
             text-align: center;
@@ -24,9 +25,47 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            body {
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            #unit-list {
+                display: none;
+            }
+            #toggle-button {
+                display: block;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                background-color: #007BFF;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
     </style>
 </head>
 <body>
+    <button id="toggle-button" onclick="toggleUnitList()">Units</button>
     <div id="unit-list">
         <ul>
             <li><a href="#startUnit1">Unit 1</a></li>
@@ -73,18 +112,32 @@
     <h3><p>Unit 2</p></h3>
     <h4 id="startUnit2Part1">Part 1 - Who is Kyle?</h4>
     <p>I am 37 years old and have been in the United States Air Force for 17 years, working in aircraft maintenance. I currently live in Hawaii and plan to stay there until I retire and further into the future. I have two kids who live in Georgia with their mother, Konnor (8) and Lillian (6); they, along with my fiancé and her son, make up my entire world and universe. The first picture is a collage of photos of my kids and myself; the next is me and my wonderful fiancé and love of my life, April. The last photo is all of us together as a family. We don&apos;t often get together with all 5 of us, but when we do, it&apos;s always some of the best days of my life.</p>
-    <p><img src="/Unit2/kids.jpg" alt="Kyle, Konnor, and Lily" height="800" width="800"><img src="/Unit2/us.jpg" alt="Kyle and April" height="800" width="800"><img src="/Unit2/family.jpg" alt="Kyle, April, Ryder, Konnor and Lily" height="800" width="800">
+    <div class="image-container">
+        <img src="/Unit2/kids.jpg" alt="Kyle, Konnor, and Lily">
+        <img src="/Unit2/us.jpg" alt="Kyle and April">
+        <img src="/Unit2/family.jpg" alt="Kyle, April, Ryder, Konnor and Lily">
+    </div>
     <p>My two favorite hobbies are golf and video games. Although I am not great at either, I enjoy both thoroughly. While home in Hawaii, I try to go out to golf at least every other weekend. Because Hawaii is a paradise, I get to do it year-round! There are rarely weekends when the weather is so terrible that I don&apos;t get to golf. One of my favorite things to do is golf with April; every time we are together, we try to get at least a round (or two) in! When the weather does not permit, or I need a slow and low-key weekend, you can find me on my PC, playing video games with my best friend, Devin. </p>
     <p>Some of my favorite websites to visit are:</p>
         <ul>
-            <li><a href="www.reddit.com">Reddit</a> I spend plenty of spare time scrolling through reddit and exploring subreddits that interest me.</li>
-            <li><a href="www.steamcommunity.com">Steam</a> Where I find great video games and deals for PC!</li>
-            <li><a href="www.puakeagolf.com">Pueakea Golf course</a> This is one of me and my fiancé&apos;s favorite courses to play on Kauai.</li>
+            <li><a href="http://www.reddit.com">Reddit</a> I spend plenty of spare time scrolling through reddit and exploring subreddits that interest me.</li>
+            <li><a href="http://www.steamcommunity.com">Steam</a> Where I find great video games and deals for PC!</li>
+            <li><a href="http://www.puakeagolf.com">Pueakea Golf course</a> This is one of me and my fiancé&apos;s favorite courses to play on Kauai.</li>
         </ul>
     <p>I think the next step for my website is to start working with CSS and create something more appealing to the eye. I want to work with a sleek and modernized look, not like an old Facebook page. I have not decided on a color palette yet, but it will probably be something rather simple, maybe some pastel-type colors.</p>
     <p><a href="/Unit2/Kyle Deschamps - Unit 2.pdf">PDF Version</a></p>
     <hr>
     <h4 id="startUnit2Part2">Part 2 - Form Homework</h4>
     
+    <script>
+        function toggleUnitList() {
+            var unitList = document.getElementById('unit-list');
+            if (unitList.style.display === 'none' || unitList.style.display === '') {
+                unitList.style.display = 'block';
+            } else {
+                unitList.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

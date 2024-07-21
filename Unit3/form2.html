@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Club Rental Reservation Form</title>
+</head>
+<body>
+    <h1>Golf Club Rental Reservation Form</h1>
+    <form onsubmit="calculateTotal(); return false;">
+        <!-- Contact Information Section -->
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+
+        <!-- Rental Clubs Section -->
+        <fieldset>
+            <legend>Rental Clubs</legend>
+            <label for="irons">Select Irons:</label>
+            <select id="irons" name="irons">
+                <option value="taylormade_p790">Taylormade P790 irons ($30)</option>
+                <option value="titleist_t100">Titleist T100 ($35)</option>
+            </select><br><br>
+
+            <label for="fairway_woods">Select Fairway Woods and Hybrids:</label>
+            <select id="fairway_woods" name="fairway_woods">
+                <option value="taylormade_qi10">Taylormade Qi10 ($25)</option>
+                <option value="titleist_tsr2">Titleist TSr2 ($20)</option>
+            </select><br><br>
+
+            <label for="driver">Select Driver:</label>
+            <select id="driver" name="driver">
+                <option value="taylormade_qi10_max">Taylormade Qi10 Max ($20)</option>
+                <option value="titleist_tsr2">Titleist TSr2 ($15)</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Date and Time Section -->
+        <fieldset>
+            <legend>Date and Time</legend>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Select Time:</label>
+            <select id="time" name="time" required>
+                <option value="06:00">06:00</option>
+                <option value="06:20">06:20</option>
+                <option value="06:40">06:40</option>
+                <option value="07:00">07:00</option>
+                <option value="07:20">07:20</option>
+                <option value="07:40">07:40</option>
+                <option value="08:00">08:00</option>
+                <option value="08:20">08:20</option>
+                <option value="08:40">08:40</option>
+                <option value="09:00">09:00</option>
+                <option value="09:20">09:20</option>
+                <option value="09:40">09:40</option>
+                <option value="10:00">10:00</option>
+                <option value="10:20">10:20</option>
+                <option value="10:40">10:40</option>
+                <option value="11:00">11:00</option>
+                <option value="11:20">11:20</option>
+                <option value="11:40">11:40</option>
+                <option value="12:00">12:00</option>
+                <option value="12:20">12:20</option>
+                <option value="12:40">12:40</option>
+                <option value="13:00">13:00</option>
+                <option value="13:20">13:20</option>
+                <option value="13:40">13:40</option>
+                <option value="14:00">14:00</option>
+                <option value="14:20">14:20</option>
+                <option value="14:40">14:40</option>
+                <option value="15:00">15:00</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Agreement Section -->
+        <fieldset>
+            <legend>Agreement</legend>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions</label><br><br>
+            <input type="checkbox" id="promotions" name="promotions">
+            <label for="promotions">I agree to receive email promotions</label><br><br>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+<script>
+    function calculateTotal() {
+        const ironsPrices = {
+            "taylormade_p790": 30,
+            "titleist_t100": 35
+        };
+        const woodsPrices = {
+            "taylormade_qi10": 25,
+            "titleist_tsr2": 20
+        };
+        const driverPrices = {
+            "taylormade_qi10_max": 20,
+            "titleist_tsr2": 15
+        };
+
+        const irons = document.getElementById('irons').value;
+        const woods = document.getElementById('fairway_woods').value;
+        const driver = document.getElementById('driver').value;
+
+        const total = ironsPrices[irons] + woodsPrices[woods] + driverPrices[driver];
+
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+
+        alert(
+            `Name: ${name}\n` +
+            `Phone: ${phone}\n` +
+            `Email: ${email}\n` +
+            `Date: ${date}\n` +
+            `Time: ${time}\n` +
+            `Total Cost: $${total}`
+        );
+    }
+</script>

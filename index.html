@@ -5,13 +5,17 @@
     <title>Kyle's Page</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
             margin-left: 15%;
             margin-right: 15%;
+            background-color: #244855;
+            color: #333;
         }
         h1, h2 {
             text-align: center;
+            color: #E64833;
+            text-shadow: 1px 1px 2px #000;
         }
         #unit-list {
             position: fixed;
@@ -19,10 +23,19 @@
             left: 20px;
             max-height: 80%;
             overflow-y: auto;
-            background-color: #f9f9f9;
+            background-color: #90AEAD;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #874F41;
             border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .unit-section {
+            background-color: #90AEAD;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #E64833;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #874F41;
         }
         .image-container {
             display: flex;
@@ -34,6 +47,38 @@
             width: 50%;
             max-width: 400px;
             height: auto;
+        }
+        a {
+            color: #E64833;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #000;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #E64833;
+            color: #FBE9D0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #874F41;
+        }
+        ul, li {
+            color: #E64833;
+            text-shadow: 1px 1px 2px #000;
+        }
+        .favorite-websites {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .favorite-websites .website {
+            margin-bottom: 10px;
+            text-indent: -20px; 
+            padding-left: 20px; 
         }
         @media (max-width: 768px) {
             body {
@@ -48,8 +93,8 @@
                 position: fixed;
                 top: 20px;
                 left: 20px;
-                background-color: #007BFF;
-                color: white;
+                background-color: #E64833;
+                color: #FBE9D0;
                 padding: 10px;
                 border: none;
                 border-radius: 5px;
@@ -101,14 +146,15 @@
     <h2>CSCI434 Web Programming</h2>
     
     <hr>
-    
+    <div class="unit-section">
     <h3 id="startUnit1"><p>Unit 1 - My Page, the Beginning</p></h3>
     <p>I took some time to research how to make bullet points as a hierarchical layout within HTML; I aim to have the left-hand table of contents follow the user as they scroll down the page through each assignment. Clicking the links will advance them to that specific point. I will eventually migrate the site to GitHub, as I have used it before for previous classes. I am currently in a time crunch to accomplish the assignment due to deployment requirements, and GitHub was forcing me to change my password but also not allowing me to pass the Captcha check to do so. I will continue to troubleshoot and migrate my site to GitHub this week.</p>
     <p>The following steps hopefully include learning to create a margin on the left-hand side that will move up and down with the user as they scroll through the page, much like the table of contents does on a standard Wikipedia page. For the assignments with forms, I have not decided whether to embed them in the main page or create links to them individually. I hope that as I progress through the course, I learn the ups and downs of each option. The page has a fundamental CSS style with very little modification. I want to modernize it and allow for soft borders and 3-dimensional aspects. </p>
     <p><a href="/Unit1/Kyle Deschamps - Unit 1.pdf">PDF Version</a></p>
-    
-    <hr>
+    </div>
 
+    <hr>
+    <div class="unit-section">
     <h3><p>Unit 2</p></h3>
     <h4 id="startUnit2Part1">Part 1 - Who is Kyle?</h4>
     <p>I am 37 years old and have been in the United States Air Force for 17 years, working in aircraft maintenance. I currently live in Hawaii and plan to stay there until I retire and further into the future. I have two kids who live in Georgia with their mother, Konnor (8) and Lillian (6); they, along with my fiancé and her son, make up my entire world and universe. The first picture is a collage of photos of my kids and myself; the next is me and my wonderful fiancé and love of my life, April. The last photo is all of us together as a family. We don&apos;t often get together with all 5 of us, but when we do, it&apos;s always some of the best days of my life.</p>
@@ -119,18 +165,30 @@
     </div>
     <p>My two favorite hobbies are golf and video games. Although I am not great at either, I enjoy both thoroughly. While home in Hawaii, I try to go out to golf at least every other weekend. Because Hawaii is a paradise, I get to do it year-round! There are rarely weekends when the weather is so terrible that I don&apos;t get to golf. One of my favorite things to do is golf with April; every time we are together, we try to get at least a round (or two) in! When the weather does not permit, or I need a slow and low-key weekend, you can find me on my PC, playing video games with my best friend, Devin. </p>
     <p>Some of my favorite websites to visit are:</p>
-        <ul>
-            <li><a href="http://www.reddit.com">Reddit</a> I spend plenty of spare time scrolling through reddit and exploring subreddits that interest me.</li>
-            <li><a href="http://www.steamcommunity.com">Steam</a> Where I find great video games and deals for PC!</li>
-            <li><a href="http://www.puakeagolf.com">Pueakea Golf course</a> This is one of me and my fiancé&apos;s favorite courses to play on Kauai.</li>
-        </ul>
+    <div class="favorite-websites">
+        <div class="website">
+            <a href="http://www.reddit.com">Reddit</a> I spend plenty of spare time scrolling through reddit and exploring subreddits that interest me.
+        </div>
+        <div class="website">
+            <a href="http://www.steamcommunity.com">Steam</a> Where I find great video games and deals for PC!
+        </div>
+        <div class="website">
+            <a href="http://www.puakeagolf.com">Pueakea Golf course</a> This is one of me and my fiancé's favorite courses to play on Kauai.
+        </div>
+    </div>
     <p>I think the next step for my website is to start working with CSS and create something more appealing to the eye. I want to work with a sleek and modernized look, not like an old Facebook page. I have not decided on a color palette yet, but it will probably be something rather simple, maybe some pastel-type colors.</p>
     <p><a href="/Unit2/Kyle Deschamps - Unit 2.pdf">PDF Version</a></p>
+    </div>
+    
     <hr>
+    <div class="unit-section">
     <h4 id="startUnit2Part2">Part 2 - Form Homework</h4>
     <p>For Part 2, I created a form that allows you to select a set of rental clubs and a pickup time for them</p>
-    <p><a href="/Unit2/form.html">Golf Club Rental Reservation Form</a>
+    <p><a href="/Unit2/form.html">Golf Club Rental Reservation Form</a></p>
+    </div>
+
     <hr>
+    <div class="unit-section">
     <h3><p>Unit 3</p></h3>
     <h4 id="startUnit3Part1">Part 1 - Webpage Design</h4>
     <p>My website will be twofold; the first is a step-by-step course walkthrough, with each assignment and unit posted. It will also have information and media about Golf. The description of the pages is as follows:</p>
@@ -144,9 +202,14 @@
     <p>My next major step is creating a CSS build for my page to include my chosen color pallet and the “unit in a box” feel I want. I want the landing page to feel like a bulletin board, with each unit and section in an individual box. I will continue to build the page based on the requirements of the course, adding a section for each unit as it progresses. I also plan to make each form an individual form so that the progress of forms can be viewed while exploring the page. I may add screenshots at each breaking point to show the site's development over time.</p>
     <p><a href="/Unit3/Kyle Deschamps - Unit 3.pdf">PDF Version</a></p>
     <p><a href="/Unit3/Website Mockup.pdf">Website Design Mockup</a></p>
+    </div>
+
+    
     <hr>
+    <div class="unit-section">
     <h4 id="startUnit3Part2">Part 2 - Form Homework Version 2</h4>
-    <p><a href="/Unit3/form2.html">Golf Club Rental Reservation with Prices</a>        
+    <p><a href="/Unit3/form2.html">Golf Club Rental Reservation with Prices</a></p>
+    </div>       
     
     <script>
         function toggleUnitList() {
